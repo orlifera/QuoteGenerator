@@ -1,8 +1,12 @@
-import React from 'react'
+"use client"
 
+import { useQuoteContext } from "@/hooks/QuoteProvider";
 
 export default function Preview() {
+    const { quote } = useQuoteContext();
     return (
-        <div>Preview</div>
+        <div>
+            {quote.customerName}
+        </div>
     )
 }
